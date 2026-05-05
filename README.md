@@ -1,29 +1,43 @@
 # Portfolio
 
-[LinkedIn](https://linkedin.com/in/tlefaucheur)
-
----
+PM by trade, builder by habit. [LinkedIn](https://linkedin.com/in/tlefaucheur)
 
 ## Browser Extensions
 
-### x-auto-poster
-Chrome extension that schedules and auto-posts content on X.com by driving the compose UI directly — no API key, no OAuth. Posts live in a database (Supabase by default); the extension registers Chrome alarms and fires them at the right time using human-like input to avoid bot detection.
+**[x-auto-poster](https://github.com/teab0www/x-auto-poster)**
+X's API is expensive and rate-limited -- browser automation is neither.
+- Schedules and auto-posts content on X by driving the compose UI directly, no API key, no OAuth
+- Human-like input timing to avoid bot detection, Supabase as the default data source
+- Stack: Chrome Extension (MV3), JavaScript
 
-### meet-mute-chrome
-Global mute/unmute hotkey for Google Meet. Works from any tab without switching to the meeting window. Supports multiple simultaneous meetings and a fully customizable shortcut. Available on the [Chrome Web Store](https://chromewebstore.google.com/detail/google-meet-mute-shortcut/libibdbacjghlaggmdcgajpbdnbmnmgp).
+**[meet-mute-chrome](https://github.com/teab0www/meet-mute-chrome)** -- [Chrome Web Store](https://chromewebstore.google.com/detail/google-meet-mute-shortcut/libibdbacjghlaggmdcgajpbdnbmnmgp)
+Unmuting in Google Meet requires switching to the right tab, every single time.
+- Global hotkey to mute/unmute from any tab, without switching to the meeting window
+- Works across multiple simultaneous meetings, fully customizable shortcut
+- Stack: Chrome Extension (MV3), JavaScript
 
-### tab-jumper
-Keyboard shortcuts to jump to specific browser tabs instantly. Smart URL matching handles dynamic URLs for Google Docs, Gmail, Jira, and Calendar so the shortcut keeps working regardless of which document or calendar view is open.
-
----
+**tab-jumper**
+Switching between frequently used tabs by clicking is slow.
+- Keyboard shortcuts to jump to specific tabs instantly
+- Smart URL matching handles dynamic URLs for Google Docs, Gmail, Jira, and Calendar
+- Stack: Chrome Extension (MV3), JavaScript
 
 ## AI / Data Tools
 
-### diablo
-Semantic search over ~40,000 Lamborghini Diablo forum posts. A Chrome extension scraped 3,300 threads from a long-running owner community; an LLM summarized each one; summaries were embedded with `text-embedding-3-small` and stored in Supabase with pgvector. Search by plain-English question, get ranked results in milliseconds. Live at [diablo132.vercel.app](https://diablo132.vercel.app).
+**diablo** -- [diablo132.vercel.app](https://diablo132.vercel.app)
+The Lamborghini Diablo (Italian sports car) has a strong community with decades of technical knowledge buried in forum threads and hard to search.
+- Ask like you'd ask a mechanic: "clutch slipping at low speed" finds threads about gearbox wear, not just posts containing those exact words
+- 3,300 threads summarized by an LLM, embedded and ranked by semantic similarity
+- Stack: OpenAI embeddings, Supabase pgvector, Next.js
 
-### dredgio
-Market monitoring tool. Define a topic, get a structured intelligence report aggregated from Reddit, Hacker News, and Google News. FastAPI backend on Railway, React frontend on Vercel, DeepSeek as the LLM. Live at [dredgio.vercel.app](https://dredgio.vercel.app).
+**[dredgio](https://github.com/teab0www/dredgio)** -- [dredgio.vercel.app](https://dredgio.vercel.app)
+Tracking what people say about a topic across Reddit, Hacker News, and Google News is manual and slow.
+- Define a topic, get a structured intelligence report with signals, themes, and sentiment
+- Aggregates and summarizes across sources in one shot
+- Stack: Python FastAPI, React, DeepSeek, Railway + Vercel
 
-### voice-finance-tracking
-PWA for tracking personal expenses by voice. Speak naturally ("12 euros on lunch"), GPT-4o-mini parses it into structured fields, and the entry lands in Google Sheets via Service Account. Categories are driven by a config tab in the same Sheet — no code changes needed to add new ones. Built for daily mobile use on Android Chrome.
+**voice-finance-tracking**
+Logging expenses on the go is friction -- opening an app, tapping fields, selecting categories.
+- Speak naturally ("12 euros on lunch"), GPT-4o-mini parses it into structured fields
+- Entries land directly in Google Sheets via Service Account, categories driven by a config tab
+- Stack: Vanilla JS, Web Speech API, OpenAI GPT-4o-mini, Google Sheets API
