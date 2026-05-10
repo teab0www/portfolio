@@ -25,8 +25,9 @@ Chrome addon to jump to specific tabs via keyboard shortcuts.
 
 ### AI / Data Tools
 
-**>> [emoji-generator](https://github.com/teab0www/emoji-generator)**  
-AI image benchmark — upload a reference emoji + a prompt, get parallel outputs from OpenAI, Gemini, and fal.ai.
+**>> emoji-generator**..
+[http://emoji-gen.vercel.app/](http://emoji-gen.vercel.app/)..  
+AI image benchmark: you upload a reference emoji + a prompt, get parallel outputs from OpenAI, Gemini, Qwen, and more.
 - Results stream in model-by-model via SSE; one-tap background removal via Pixelcut
 - Stack: React, Cloudflare Workers (Hono), Neon Postgres, R2, Vercel
 
