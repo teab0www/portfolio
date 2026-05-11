@@ -25,12 +25,13 @@ Chrome addon to jump to specific tabs via keyboard shortcuts.
 
 ### AI / Data Tools
 
-**>> emoji-generator**..
-[http://emoji-gen.vercel.app/](http://emoji-gen.vercel.app/)..  
+**>> emoji-generator**  
+[http://emoji-gen.vercel.app/](http://emoji-gen.vercel.app/)  
 AI image benchmark: you upload a reference emoji + a prompt, get parallel outputs from OpenAI, Gemini, Qwen, and more.
 - Results stream in model-by-model via SSE; one-tap background removal via Pixelcut
 - Stack: React, Cloudflare Workers (Hono), Neon Postgres, R2, Vercel
 
+  
 **>> diablo**  
 [diablo132.vercel.app](https://diablo132.vercel.app)  
 The Lamborghini Diablo community platform with searchable technical knowledge.
