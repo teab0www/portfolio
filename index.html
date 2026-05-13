@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thibaut Le Faucheur — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f7f7f5;
+      color: #111;
+      line-height: 1.6;
+      padding: 72px 24px 96px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      margin-bottom: 72px;
+    }
+
+    header h1 {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      letter-spacing: -0.3px;
+    }
+
+    header p {
+      font-size: 15px;
+      color: #666;
+    }
+
+    header a {
+      color: #111;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #ccc;
+      transition: text-decoration-color 0.15s;
+    }
+
+    header a:hover {
+      text-decoration-color: #111;
+    }
+
+    /* Section */
+    section {
+      margin-bottom: 56px;
+    }
+
+    section h2 {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #aaa;
+      margin-bottom: 16px;
+    }
+
+    /* Cards */
+    .projects {
+      display: grid;
+      gap: 12px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e6e6e2;
+      border-radius: 12px;
+      padding: 22px 24px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+      cursor: default;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+      border-color: #d0d0cc;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+    }
+
+    .card-links {
+      display: flex;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .link-btn {
+      font-size: 12px;
+      font-weight: 500;
+      color: #666;
+      text-decoration: none;
+      padding: 3px 10px;
+      border: 1px solid #e0e0dc;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: background 0.12s, border-color 0.12s, color 0.12s;
+    }
+
+    .link-btn:hover {
+      background: #f2f2ef;
+      border-color: #c8c8c4;
+      color: #111;
+    }
+
+    .card-tagline {
+      font-size: 13.5px;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .card-bullets {
+      list-style: none;
+      margin-bottom: 14px;
+    }
+
+    .card-bullets li {
+      font-size: 13.5px;
+      color: #444;
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 3px;
+    }
+
+    .card-bullets li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: #ccc;
+    }
+
+    .card-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .tag {
+      font-size: 11px;
+      font-weight: 500;
+      color: #999;
+      background: #f2f2ef;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 48px 16px 72px; }
+      .card-header { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>Thibaut Le Faucheur</h1>
+    <p>PM by trade, builder by habit &nbsp;·&nbsp; <a href="https://linkedin.com/in/tlefaucheur" target="_blank">LinkedIn ↗</a></p>
+  </header>
+
+  <section>
+    <h2>Browser Extensions</h2>
+    <div class="projects">
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">x-auto-poster</span>
+          <div class="card-links">
+            <a class="link-btn" href="https://github.com/teab0www/x-auto-poster" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+        <p class="card-tagline">X's API is expensive and rate-limited — browser automation is neither.</p>
+        <ul class="card-bullets">
+          <li>Schedules and auto-posts content on X by driving the compose UI directly, no API key, no OAuth</li>
+          <li>Human-like input timing to avoid bot detection, Supabase as the default data source</li>
+        </ul>
+        <div class="card-stack">
+          <span class="tag">Chrome Extension MV3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Supabase</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">meet-mute-chrome</span>
+          <div class="card-links">
+            <a class="link-btn" href="https://github.com/teab0www/meet-mute-chrome" target="_blank">GitHub ↗</a>
+            <a class="link-btn" href="https://chromewebstore.google.com/detail/google-meet-mute-shortcut/libibdbacjghlaggmdcgajpbdnbmnmgp" target="_blank">Chrome Store ↗</a>
+          </div>
+        </div>
+        <p class="card-tagline">Unmuting in Google Meet requires switching to the right tab, every single time.</p>
+        <ul class="card-bullets">
+          <li>Global hotkey to mute/unmute from any tab, without switching to the meeting window</li>
+          <li>Works across multiple simultaneous meetings, fully customizable shortcut</li>
+        </ul>
+        <div class="card-stack">
+          <span class="tag">Chrome Extension MV3</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">tab-jumper</span>
+          <div class="card-links"></div>
+        </div>
+        <p class="card-tagline">Switching between frequently used tabs by clicking is slow.</p>
+        <ul class="card-bullets">
+          <li>Keyboard shortcuts to jump to specific tabs instantly</li>
+          <li>Smart URL matching handles dynamic URLs for Google Docs, Gmail, Jira, and Calendar</li>
+        </ul>
+        <div class="card-stack">
+          <span class="tag">Chrome Extension MV3</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>AI / Data Tools</h2>
+    <div class="projects">
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">diablo</span>
+          <div class="card-links">
+            <a class="link-btn" href="https://diablo132.vercel.app" target="_blank">Live ↗</a>
+          </div>
+        </div>
+        <p class="card-tagline">The Lamborghini Diablo has a strong community with decades of technical knowledge buried in forum threads and hard to search.</p>
+        <ul class="card-bullets">
+          <li>Ask like you'd ask a mechanic: "clutch slipping at low speed" finds threads about gearbox wear, not just posts containing those exact words</li>
+          <li>3,300 threads summarized by an LLM, embedded and ranked by semantic similarity</li>
+        </ul>
+        <div class="card-stack">
+          <span class="tag">OpenAI Embeddings</span>
+          <span class="tag">Supabase pgvector</span>
+          <span class="tag">Next.js</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">dredgio</span>
+          <div class="card-links">
+            <a class="link-btn" href="https://github.com/teab0www/dredgio" target="_blank">GitHub ↗</a>
+            <a class="link-btn" href="https://dredgio.vercel.app" target="_blank">Live ↗</a>
+          </div>
+        </div>
+        <p class="card-tagline">Tracking what people say about a topic across Reddit, Hacker News, and Google News is manual and slow.</p>
+        <ul class="card-bullets">
+          <li>Define a topic, get a structured intelligence report with signals, themes, and sentiment</li>
+          <li>Aggregates and summarizes across sources in one shot</li>
+        </ul>
+        <div class="card-stack">
+          <span class="tag">Python FastAPI</span>
+          <span class="tag">React</span>
+          <span class="tag">DeepSeek</span>
+          <span class="tag">Railway</span>
+          <span class="tag">Vercel</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">voice-finance-tracking</span>
+          <div class="card-links"></div>
+        </div>
+        <p class="card-tagline">Logging expenses on the go is friction — opening an app, tapping fields, selecting categories.</p>
+        <ul class="card-bullets">
+          <li>Speak naturally ("12 euros on lunch"), GPT-4o-mini parses it into structured fields</li>
+          <li>Entries land directly in Google Sheets via Service Account, categories driven by a config tab</li>
+        </ul>
+        <div class="card-stack">
+          <span class="tag">Vanilla JS</span>
+          <span class="tag">Web Speech API</span>
+          <span class="tag">GPT-4o-mini</span>
+          <span class="tag">Google Sheets API</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
