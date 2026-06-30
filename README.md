@@ -8,6 +8,11 @@
 - meet-mute-chrome
 - tab-jumper
 
+## Mobile
+
+- Onboard
+- gym-tracker
+
 ## AI / Data Tools
 
 - diablo
